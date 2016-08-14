@@ -36,14 +36,14 @@ namespace WebShopApps\Tracker\Model\Config\Source;
 class Preurl implements \Magento\Framework\Option\ArrayInterface
 {
     /**
-     * @var \WebShopApps\Tracker\Model\Carrier\Tracker
+     * @var \WebShopApps\Tracker\Model\Carrier\Tracker1
      */
     protected $_carrierTracker;
 
     /**
-     * @param \WebShopApps\Tracker\Model\Carrier\Tracker $carrierTracker1
+     * @param \WebShopApps\Tracker\Model\Carrier\Tracker1 $carrierTracker1
      */
-    public function __construct(\WebShopApps\Tracker\Model\Carrier\Tracker $carrierTracker1)
+    public function __construct(\WebShopApps\Tracker\Model\Carrier\Tracker1 $carrierTracker1)
     {
         $this->_carrierTracker = $carrierTracker1;
     }
@@ -54,7 +54,7 @@ class Preurl implements \Magento\Framework\Option\ArrayInterface
     public function toOptionArray()
     {
         $arr = [];
-        foreach ($this->_carrierTracker->getCode('condition_name') as $k => $v) {
+        foreach ($this->_carrierTracker->getCode('preurl') as $k => $v) {
             $arr[] = ['value' => $k, 'label' => $v];
         }
         return $arr;

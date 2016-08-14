@@ -54,7 +54,7 @@
                 <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Title</label>
                 </field>
-                <field id="preurl" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="preurl" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Pre-Configured Tracking URL</label>
                     <comment>Select from known Pre-Configured URL's</comment>
                     <source_model>WebShopApps\Tracker\Model\Config\Source\Preurl</source_model>

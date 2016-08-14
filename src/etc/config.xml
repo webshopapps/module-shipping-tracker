@@ -39,7 +39,8 @@
             <tracker1>
                 <active>0</active>
                 <name>Tracker1</name>
-                <model>tracker/carrier_tracker1</model>
+                <sallowspecific>0</sallowspecific>
+                <model>WebShopApps\Tracker\Model\Carrier\Tracker1</model>
                 <title>WebShopApps Tracker 1</title>
             </tracker1>
         </carriers>

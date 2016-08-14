@@ -46,13 +46,17 @@ class ReplaceEmailTemplate implements ObserverInterface
     /**
      * @var \WebShopApps\Tracker\Helper\Data
      */
-    protected $trackerDataHelper;
+    protected $_trackerDataHelper;
 
+    /**
+     * ReplaceEmailTemplate constructor.
+     * @param \WebShopApps\Tracker\Helper\Data $shipperDataHelper
+     */
     public function __construct(
         \WebShopApps\Tracker\Helper\Data $shipperDataHelper
     )
     {
-        $this->trackerDataHelper = $shipperDataHelper;
+        $this->_trackerDataHelper = $shipperDataHelper;
     }
     /**
      * Record order shipping information after order is placed
@@ -62,11 +66,11 @@ class ReplaceEmailTemplate implements ObserverInterface
      */
     public function execute(EventObserver $observer)
     {
-        if ($this->trackerDataHelper->getConfigValue('carriers/tracker1/active')) {
+        if ($this->_trackerDataHelper->getConfigValue('carriers/tracker1/active')) {
 
             $blockentity = $observer->getBlock();
-            if ($blockentity->getTemplate() == 'email/order/shipment/track.phtml') {
-                $blockentity->setTemplate('webshopapps/tracker/email/order/shipment/track.phtml');
+            if ($blockentity->getTemplate() == 'Magento_Sales::email/order/shipment/track.phtml') {
+                $blockentity->setTemplate('WebShopApps_Tracker::email/order/shipment/track.phtml');
             }
         }
     }

@@ -34,20 +34,7 @@
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
-    <event name="core_block_abstract_to_html_before">
+    <event name="view_block_abstract_to_html_before">
         <observer name="tracker_replace_email_template" instance="WebShopApps\Tracker\Observer\ReplaceEmailTemplate" />
     </event>
 </config>
-
-
-<core_block_abstract_to_html_before>
-<observers>
-    <webshopapps_tracker>
-        <type>singleton</type>
-        <class>tracker/observer</class>
-        <method>replaceEmailTemplate</method>
-    </webshopapps_tracker>
-</observers>
-</core_block_abstract_to_html_before>
-
-
