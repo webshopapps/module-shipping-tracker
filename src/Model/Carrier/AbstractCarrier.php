@@ -191,28 +191,28 @@ class AbstractCarrier extends \Magento\Shipping\Model\Carrier\AbstractCarrier
             ),
 
             'tracking_url' => array(
-                'ddt' => __('http://www.DDT.com/portal/pw/track?trackNumber=#TRACKNUM#'),
-                'post_danmark' => __('http://www.postdanmark.dk/tracktrace/TrackTrace.do?i_stregkode=#TRACKNUM#&i;_lang=IND'),
-                'tnt' => __('https://securepostplaza.tntpost.nl/TPGApps/tracktrace/findByBarcodeServlet?BARCODE=#TRACKNUM#&ZIPCODE=#POSTCODE#'),
-                'dpd_de' => __('http://extranet.dpd.de/cgi-bin/delistrack?pknr=#TRACKNUM#&typ=1&lang=de'),
-                'dhl_de' => __('http://nolp.dhl.de/nextt-online-public/set_identcodes.do?lang=de&idc=#TRACKNUM#'),
-                'gls' => __('http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DE03/DE/5001.htm?txtAction=71000&txtQuery=#TRACKNUM#&x=0&y=0'),
-                'apc' => __('https://emea.netdespatch.com/mba/9116x0/track/?type=1&ref=#TRACKNUM#'),
-                'dpd_uk' => __('http://www.dpd.co.uk/tracking/trackingSearch.do?search.searchType=0&search.parcelNumber=#TRACKNUM#'),
-                'dhl_uk' => __('http://www.dhl.co.uk/content/gb/en/express/tracking.shtml?brand=DHL&AWB=#TRACKNUM#'),
-                'fedex' => __('http://www.fedexuk.net/accounts/QuickTrack.aspx?consignment=#TRACKNUM#'),
-                'fedex_us' => __('http://www.fedex.com/Tracking?language=english&cntry_code=us&tracknumbers=#TRACKNUM#'),
-                'parcelforce' => __('http://www.parcelforce.com/portal/pw/track?trackNumber=#TRACKNUM#'),
-                'royal_mail' => __('http://www.royalmail.com/track-trace/?trackNumber=#TRACKNUM#'),
-                'uk_mail' => __('http://www.business-post.com/scripts/wsisa.dll/ws_quickpod.html?lc_SearchValue=#TRACKNUM#'),
-                'tnt_uk' => __('http://www.kiosk.tnt.com/webshipper/doTrack.asp?C=#TRACKNUM#&L=EN'),
-                'usps_usa' => __('https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1=#TRACKNUM#'),
+                'ddt' => 'http://www.DDT.com/portal/pw/track?trackNumber=#TRACKNUM#',
+                'post_danmark' => 'http://www.postdanmark.dk/tracktrace/TrackTrace.do?i_stregkode=#TRACKNUM#&i;_lang=IND',
+                'tnt' => 'https://securepostplaza.tntpost.nl/TPGApps/tracktrace/findByBarcodeServlet?BARCODE=#TRACKNUM#&ZIPCODE=#POSTCODE#',
+                'dpd_de' => 'http://extranet.dpd.de/cgi-bin/delistrack?pknr=#TRACKNUM#&typ=1&lang=de',
+                'dhl_de' => 'http://nolp.dhl.de/nextt-online-public/set_identcodes.do?lang=de&idc=#TRACKNUM#',
+                'gls' => 'http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DE03/DE/5001.htm?txtAction=71000&txtQuery=#TRACKNUM#&x=0&y=0',
+                'apc' => 'https://emea.netdespatch.com/mba/9116x0/track/?type=1&ref=#TRACKNUM#',
+                'dpd_uk' => 'http://www.dpd.co.uk/tracking/trackingSearch.do?search.searchType=0&search.parcelNumber=#TRACKNUM#',
+                'dhl_uk' => 'http://www.dhl.co.uk/content/gb/en/express/tracking.shtml?brand=DHL&AWB=#TRACKNUM#',
+                'fedex' => 'http://www.fedexuk.net/accounts/QuickTrack.aspx?consignment=#TRACKNUM#',
+                'fedex_us' => 'http://www.fedex.com/Tracking?language=english&cntry_code=us&tracknumbers=#TRACKNUM#',
+                'parcelforce' => 'http://www.parcelforce.com/portal/pw/track?trackNumber=#TRACKNUM#',
+                'royal_mail' => 'http://www.royalmail.com/track-trace/?trackNumber=#TRACKNUM#',
+                'uk_mail' => 'http://www.business-post.com/scripts/wsisa.dll/ws_quickpod.html?lc_SearchValue=#TRACKNUM#',
+                'tnt_uk' => 'http://www.kiosk.tnt.com/webshipper/doTrack.asp?C=#TRACKNUM#&L=EN',
+                'usps_usa' => 'https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1=#TRACKNUM#',
             ),
 
         );
 
         if (!isset($codes[$type])) {
-            throw Mage::exception('Mage_Shipping', __('Invalid Tracking code type: %s', $type));
+            throw new LocalizedException(__('Invalid Tracking code type: %1.', $type));
         }
 
         if ('' === $code) {
@@ -220,7 +220,7 @@ class AbstractCarrier extends \Magento\Shipping\Model\Carrier\AbstractCarrier
         }
 
         if (!isset($codes[$type][$code])) {
-            throw Mage::exception('Mage_Shipping', __('Invalid Tracking code for type %s: %s', $type, $code));
+            throw new LocalizedException(__('Invalid Tracking code for type %1: %2.', $type, $code));
         }
 
         return $codes[$type][$code];
