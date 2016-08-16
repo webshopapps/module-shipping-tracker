@@ -44,5 +44,6 @@
                 <title>WebShopApps Tracker 1</title>
             </tracker1>
         </carriers>
+        <extension_version>0.0.0</extension_version>
     </default>
 </config>
