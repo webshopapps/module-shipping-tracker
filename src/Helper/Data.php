@@ -32,7 +32,7 @@
  * See COPYING.txt for license details.
  */
 
-namespace Webshopapps\Tracker\Helper;
+namespace WebShopApps\Tracker\Helper;
 
 use Magento\Store\Model\Store;
 use Magento\Store\Model\StoreManagerInterface;

@@ -11,7 +11,7 @@
  * @license    http://www.webshopapps.com/license/license.txt - Commercial license
  */
 
-namespace Webshopapps\Tracker\Helper;
+namespace WebShopApps\Tracker\Helper;
 
 
 /**
