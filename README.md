@@ -33,7 +33,7 @@ Install using composer by adding to your composer file using commands:
 
 Support
 -------
-For further information on using Trcker, please refer to our [online documentation](http://support.webshopapps.com/tracker/).
+For further information on using Trcker, please refer to our [online documentation](http://support.webshopapps.com/shippingtracker/).
 If you have any issues with this extension, open an issue on [GitHub](https://github.com/webshopapps/module-shipping-tracker/issues).
 
 
