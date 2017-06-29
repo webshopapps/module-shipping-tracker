@@ -27,7 +27,7 @@ Installation Instructions
 -------------------------
 Install using composer by adding to your composer file using commands:
 
-1. composer require webshopapps/module-tracker
+1. composer require webshopapps/module-shipping-tracker
 2. composer update
 3. bin/magento setup:upgrade
 
