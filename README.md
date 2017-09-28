@@ -13,7 +13,7 @@ Facts
 
 Compatibility
 -------------
-- Magento >= 2.0
+- Magento >= 2.0 (Includes 2.2)
 
 This library aims to support and is tested against the following PHP
 implementations:
@@ -21,7 +21,9 @@ implementations:
 * PHP 5.5
 * PHP 5.6
 * PHP 5.7
-enforced in the composer.json
+* PHP 7.x (Please consult [Magento 2 requirements](http://devdocs.magento.com/magento-system-requirements.html) for any exceptions)
+
+Enforced in the composer.json
 
 Installation Instructions
 -------------------------
@@ -31,11 +33,12 @@ Install using composer by adding to your composer file using commands:
 2. composer update
 3. bin/magento setup:upgrade
 
+For up-to-date installation instructions, along with troubleshooting steps, please see the documentation, below.
+
 Support
 -------
-For further information on using Trcker, please refer to our [online documentation](http://support.webshopapps.com/tracker/).
+For further information on using Tracker, please refer to our [online documentation](http://support.webshopapps.com/shippingtracker).
 If you have any issues with this extension, open an issue on [GitHub](https://github.com/webshopapps/module-shipping-tracker/issues).
-
 
 Contribution
 ------------
