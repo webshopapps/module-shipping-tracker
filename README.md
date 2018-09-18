@@ -1,4 +1,6 @@
-# WebShopApps Shipping Tracker
+# DEPRECATED WebShopApps Shipping Tracker
+
+This repository is no longer updated or supported. Please use our new Shipping Tracker module here: https://github.com/shipperhq/module-shipping-tracker
 
 Description
 -----------
@@ -38,7 +40,10 @@ For up-to-date installation instructions, along with troubleshooting steps, plea
 Support
 -------
 For further information on using Tracker, please refer to our [online documentation](http://support.webshopapps.com/shippingtracker).
-If you have any issues with this extension, open an issue on [GitHub](https://github.com/webshopapps/module-shipping-tracker/issues).
+
+No support is provided for this extension. Please move to our new tracking extension which can be found here: 
+
+https://github.com/shipperhq/module-shipping-tracker
 
 Contribution
 ------------
